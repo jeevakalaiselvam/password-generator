@@ -16,24 +16,29 @@
         <div id="main-container" class="main-container">
             <div class="password-container">
                 <div class="hint"><b>GENERATED password</b></div>
-                <div class="password-data" id="password-data">
-                    PASSWORD GOES HERE
+                <div class="password-data">
+                    <span
+                        id="password-data"
+                        class="password-data-inside"
+                    ></span>
+                    <span id="copy" class="copy">COPY</span>
                 </div>
             </div>
             <div class="selection-container">
                 <div class="selection-inner-container">
-                    <div class="hint"><b>Length</b></div>
+                    <div class="hint" id="hint-length"><b>Length - 15</b></div>
                     <div class="slider-container">
-                        <div class="min-data password-limit">4</div>
+                        <div class="min-data password-limit">8</div>
                         <input
                             type="range"
-                            min="4"
+                            min="8"
                             max="20"
                             value="15"
                             class="password-length"
                             id="password-length"
+                            oninput="lengthChanged(this.value)"
                         />
-                        <div class="max-data password-limit">30</div>
+                        <div class="max-data password-limit">20</div>
                     </div>
                 </div>
 
@@ -48,7 +53,7 @@
                 <div class="selection-inner-container">
                     <label class="form-switch">
                         <input type="checkbox" id="password-lowercase" />
-                        Include Lowecase
+                        Include Lowercase
                         <i></i>
                     </label>
                 </div>

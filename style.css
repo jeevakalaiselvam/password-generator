@@ -33,11 +33,42 @@ body {
     padding: 0.5rem;
 }
 
+.password-data-inside {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
 .password-data {
     padding: 1rem;
     background-color: #091740;
     text-align: center;
+    height: 4rem;
     font-size: 2rem;
+    position: relative;
+}
+
+.password-data:hover .copy {
+    opacity: 1;
+}
+
+.copy {
+    font-size: 10px;
+    background: linear-gradient(90deg, #1c74f5 0%, #4a47eb 35%, #1d70f4 100%);
+    padding: 0.25rem 0.25rem;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    right: 0;
+    display: inline-block;
+    transition: opacity 0.5s linear;
+}
+
+.copy:hover {
+    cursor: pointer;
 }
 
 .selection-container {
