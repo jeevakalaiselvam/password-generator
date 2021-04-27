@@ -13,39 +13,63 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <div id="main-container" class="">
+        <div id="main-container" class="main-container">
             <div class="password-container">
-                <div class="password-data">Password is here</div>
+                <div class="hint"><b>GENERATED password-limit</b></div>
+                <div class="password-data">PASSWORD GOES HERE</div>
             </div>
             <div class="selection-container">
                 <div class="selection-inner-container">
-                    <label for="" id="uppercare" class="label"
-                        >Include Uppercare</label
-                    >
-                    <input type="checkbox" id="uppercare" class="checkbox" />
+                    <div class="hint"><b>Length</b></div>
+                    <div class="slider-container">
+                        <div class="min-data password-limit">4</div>
+                        <input
+                            type="range"
+                            min="4"
+                            max="20"
+                            value="15"
+                            class="slider"
+                            id="password-length"
+                        />
+                        <div class="max-data password-limit">30</div>
+                    </div>
+                </div>
+
+                <div class="selection-inner-container">
+                    <div class="hint"><b>SETTINGS</b></div>
+                    <label class="form-switch">
+                        <input type="checkbox" />
+                        Include Uppercase
+                        <i></i>
+                    </label>
                 </div>
                 <div class="selection-inner-container">
-                    <label for="" id="lowercase" class="label"
-                        >Include Lowecare</label
-                    >
-                    <input type="checkbox" id="uppercare" class="checkbox" />
+                    <label class="form-switch">
+                        <input type="checkbox" />
+                        Include Lowecase
+                        <i></i>
+                    </label>
                 </div>
                 <div class="selection-inner-container">
-                    <label for="" id="symbols" class="label"
-                        >Include Symbols</label
-                    >
-                    <input type="checkbox" id="uppercare" class="checkbox" />
+                    <label class="form-switch">
+                        <input type="checkbox" />
+                        Include Symbols
+                        <i></i>
+                    </label>
                 </div>
                 <div class="selection-inner-container">
-                    <label for="" id="numbers" class="label"
-                        >Include Numbers</label
-                    >
-                    <input type="checkbox" id="uppercare" class="checkbox" />
+                    <label class="form-switch">
+                        <input type="checkbox" />
+                        Include Numbers
+                        <i></i>
+                    </label>
                 </div>
             </div>
-            <button class="generate-button" id="generate-button">
-                Generate
-            </button>
+            <div class="button-container">
+                <button class="generate-button" id="generate-button">
+                    Generate Password
+                </button>
+            </div>
         </div>
     </body>
 </html>

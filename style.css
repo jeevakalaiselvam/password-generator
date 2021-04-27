@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+button {
+    cursor: pointer;
+}
+
 body {
     margin: 0;
     font-family: "Rubik", sans-serif;
@@ -13,12 +17,27 @@ body {
     min-height: 100vh;
     margin: 0;
     color: #ffffff;
-    background: #040e2c;
+    background: #b6c5dc;
+}
+
+.main-container {
+    background-color: #05102e;
+    padding: 1rem;
+}
+
+.hint {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+    color: #515e85;
+    text-transform: uppercase;
+    padding: 0.5rem;
 }
 
 .password-data {
     padding: 1rem;
     background-color: #091740;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .selection-container {
@@ -26,10 +45,142 @@ body {
     margin: 0 auto;
 }
 
-.selection-inner-container {
+.form-switch {
+    display: inline-block;
+    cursor: pointer;
+    margin: 1rem 0rem;
+    background-color: #091740;
+    padding: 1rem 1rem;
     display: flex;
     justify-content: space-between;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.label {
+.form-switch i {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 46px;
+    height: 26px;
+    background-color: #e6e6e6;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    transition: all 0.3s linear;
+}
+
+.form-switch i::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 42px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+    transition: all 0.25s linear;
+}
+
+.form-switch i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    transform: translate3d(2px, 2px, 0);
+    transition: all 0.2s ease-in-out;
+}
+
+.form-switch:active i::after {
+    width: 28px;
+    transform: translate3d(2px, 2px, 0);
+}
+
+.form-switch:active input:checked + i::after {
+    transform: translate3d(16px, 2px, 0);
+}
+
+.form-switch input {
+    display: none;
+}
+
+.form-switch input:checked + i {
+    background-color: #157af6;
+}
+
+.form-switch input:checked + i::before {
+    transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+
+.form-switch input:checked + i::after {
+    transform: translate3d(22px, 2px, 0);
+}
+
+.password-limit {
+    display: inline-block;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #091740;
+}
+
+/* The slider itself */
+.slider {
+    appearance: none;
+    width: 300px;
+    height: 2px; /* Specified height */
+    background: #112956; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+    transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 100px;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #ffffff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #3952ee; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.generate-button {
+    display: inline-block;
+    border: none;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: rgb(2, 0, 36);
+    font-family: inherit;
+    text-align: center;
+    background: linear-gradient(90deg, #1c74f5 0%, #4a47eb 35%, #1d70f4 100%);
 }
