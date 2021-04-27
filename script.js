@@ -24,6 +24,7 @@ const number = "0123456789";
 const symbol = "!@#$%^&*()_+=-";
 
 let characterFunctions = [];
+let passwordLength = 15;
 
 /**
  * @author Jeeva Kalaiselvam
@@ -58,7 +59,7 @@ function checkConditions() {
         alert("Need to have atleast one selection !!");
         passwordGenerated = "";
     } else {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < passwordLength; i++) {
             generateData();
         }
     }
@@ -84,6 +85,7 @@ function generateData() {
  */
 function lengthChanged(data) {
     hintLengthEl.innerText = `LENGTH - ${data}`;
+    passwordLength = data;
 }
 
 /**
