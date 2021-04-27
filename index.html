@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <h1>Hello People</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="main-container" class="">
+            <div class="password-container">
+                <div class="password-data">Password is here</div>
+            </div>
+            <div class="selection-container">
+                <div class="selection-inner-container">
+                    <label for="" id="uppercare" class="label"
+                        >Include Uppercare</label
+                    >
+                    <input type="checkbox" id="uppercare" class="checkbox" />
+                </div>
+                <div class="selection-inner-container">
+                    <label for="" id="lowercase" class="label"
+                        >Include Lowecare</label
+                    >
+                    <input type="checkbox" id="uppercare" class="checkbox" />
+                </div>
+                <div class="selection-inner-container">
+                    <label for="" id="symbols" class="label"
+                        >Include Symbols</label
+                    >
+                    <input type="checkbox" id="uppercare" class="checkbox" />
+                </div>
+                <div class="selection-inner-container">
+                    <label for="" id="numbers" class="label"
+                        >Include Numbers</label
+                    >
+                    <input type="checkbox" id="uppercare" class="checkbox" />
+                </div>
+            </div>
+            <button class="generate-button" id="generate-button">
+                Generate
+            </button>
+        </div>
+    </body>
 </html>
