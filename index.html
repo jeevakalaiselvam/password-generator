@@ -15,8 +15,10 @@
     <body>
         <div id="main-container" class="main-container">
             <div class="password-container">
-                <div class="hint"><b>GENERATED password-limit</b></div>
-                <div class="password-data">PASSWORD GOES HERE</div>
+                <div class="hint"><b>GENERATED password</b></div>
+                <div class="password-data" id="password-data">
+                    PASSWORD GOES HERE
+                </div>
             </div>
             <div class="selection-container">
                 <div class="selection-inner-container">
@@ -28,7 +30,7 @@
                             min="4"
                             max="20"
                             value="15"
-                            class="slider"
+                            class="password-length"
                             id="password-length"
                         />
                         <div class="max-data password-limit">30</div>
@@ -38,35 +40,35 @@
                 <div class="selection-inner-container">
                     <div class="hint"><b>SETTINGS</b></div>
                     <label class="form-switch">
-                        <input type="checkbox" />
+                        <input type="checkbox" id="password-uppercase" />
                         Include Uppercase
                         <i></i>
                     </label>
                 </div>
                 <div class="selection-inner-container">
                     <label class="form-switch">
-                        <input type="checkbox" />
+                        <input type="checkbox" id="password-lowercase" />
                         Include Lowecase
                         <i></i>
                     </label>
                 </div>
                 <div class="selection-inner-container">
                     <label class="form-switch">
-                        <input type="checkbox" />
+                        <input type="checkbox" id="password-symbol" />
                         Include Symbols
                         <i></i>
                     </label>
                 </div>
                 <div class="selection-inner-container">
                     <label class="form-switch">
-                        <input type="checkbox" />
+                        <input type="checkbox" id="password-number" />
                         Include Numbers
                         <i></i>
                     </label>
                 </div>
             </div>
             <div class="button-container">
-                <button class="generate-button" id="generate-button">
+                <button class="generate-button" id="password-generate">
                     Generate Password
                 </button>
             </div>
